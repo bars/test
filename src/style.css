@@ -1,0 +1,16 @@
+.canvas {
+  background-image: "maps/map.jpg"
+}
+.playerInfo {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  transition: opacity 0.4s;
+}
+.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+.removeInput {
+  width: 80px;
+}
