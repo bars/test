@@ -1,15 +1,10 @@
 class Player {
-  constructor({...props}) {
+  constructor(props) {
     this.id = props.id++,
     this.cx = props.cx,
     this.cy = props.cy,
     this.radius = props.radius,
     this.speed = props.speed,
-    Object.defineProperty(this, "list", {
-      value: {},
-      enumerable: false,
-      writable: true
-    })
     Object.defineProperty(this, "nextPosition", {
       value: Math.round(Math.random()) ? this.lineMovingX : this.lineMovingY,
       enumerable: false,
@@ -24,17 +19,6 @@ class Player {
 
   isIntersect(point) {
     return Math.sqrt((point.x-this.cx) ** 2 + (point.y - this.cy) ** 2) < this.radius + 5;
-  }
-
-  getInfo() {
-    const list = document.createElement("ul")
-    Object.keys(this).forEach(key => {
-      let li = document.createElement("li")
-      li.textContent = `${key} : ${this[key].toFixed(2)}`
-      list.appendChild(li)
-      this.list[key] = li
-    })
-    return list
   }
 
   lineMovingX(canvas) {

@@ -5,7 +5,7 @@
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  transition: opacity 0.4s;
+  margin-left: 15px;
 }
 .hidden {
   pointer-events: none;
@@ -13,4 +13,11 @@
 }
 .removeInput {
   width: 80px;
+}
+.container {
+  margin-left: 0px;
+  padding-left: 7px;
+}
+#app {
+  width: 900px;
 }
